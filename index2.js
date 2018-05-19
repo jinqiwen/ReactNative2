@@ -1,14 +1,10 @@
-/*这里实现了页面跳转哦！1*/
+/*这里实现了页面跳转和参数传递哦！1*/
 import React from 'react';
-import { AppRegistry } from 'react-native';
+/*import { AppRegistry } from 'react-native';*/
 import { Button, View, Text } from 'react-native';
 import { createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
 
 class HomeScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Home',
-    };
-
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -16,10 +12,10 @@ class HomeScreen extends React.Component {
                 <Button
                     title="Go to Details"
                     onPress={() => {
-                        /* 1. Navigate to the Details route with params */
+                        /* i1. Navigate to the Details route wth params */
                         this.props.navigation.navigate('Details', {
                             itemId: 86,
-                            otherParam: 'anything you want here11',
+                            otherParam: 'anything you want here',
                         });
                     }}
                 />
@@ -29,10 +25,6 @@ class HomeScreen extends React.Component {
 }
 
 class DetailsScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Details',
-    };
-
     render() {
         /* 2. Get the param, provide a fallback value if not available */
         const { navigation } = this.props;
@@ -74,10 +66,10 @@ const RootStack = createStackNavigator(
     }
 );
 
-export default class App1 extends React.Component {
+export default class App extends React.Component {
     render() {
         return <RootStack />;
     }
 }
-/*注意：export 的class名字不能相同，否则会出错*/
-AppRegistry.registerComponent('ReactNative1', () => App1);
+
+/*AppRegistry.registerComponent('ReactNative1', () => App);*/
