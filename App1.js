@@ -1,3 +1,6 @@
+/*
+页面切换的例子，不传参
+ */
 import React from 'react';
 import { Button, View, Text } from 'react-native';
 import { createStackNavigator } from 'react-navigation'; // Version can be specified in package.json
