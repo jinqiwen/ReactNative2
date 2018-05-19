@@ -1,4 +1,4 @@
-/*这里实现了页面跳转哦！*/
+/*这里实现了页面跳转哦！1*/
 import React from 'react';
 import { AppRegistry } from 'react-native';
 import { Button, View, Text } from 'react-native';
