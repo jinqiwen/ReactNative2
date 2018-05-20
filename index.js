@@ -1,8 +1,7 @@
-/*这里实现了页面跳转哦！1*/
-import React from 'react';
-import { AppRegistry,Component } from 'react-native';
-import { Button, View, Text } from 'react-native';
-import { TabNavigator } from 'react-navigation'; // Version can be specified in package.json
-import app3 from './App3'
+/*
+向上看，实现了一个复杂的navigators的多页面跳转
+ */
+import { AppRegistry } from 'react-native';
+import App3 from './App4';
 
-AppRegistry.registerComponent('ReactNative1', () => app3);
+AppRegistry.registerComponent('react_navigation_demo', () => App3);
